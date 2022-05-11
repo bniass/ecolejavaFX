@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="606.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FormateurController">
+   <children>
+      <Label layoutX="203.0" layoutY="29.0" text="GESTION DES FORMATEURS" />
+      <Label layoutX="36.0" layoutY="67.0" text="Nom :" />
+      <TextField fx:id="nomTFD" layoutX="145.0" layoutY="63.0" prefHeight="25.0" prefWidth="287.0" promptText="Saisir le nom" />
+      <Label layoutX="36.0" layoutY="98.0" text="Prénom :" />
+      <TextField fx:id="prenomTFD" layoutX="145.0" layoutY="94.0" prefHeight="25.0" prefWidth="287.0" />
+      <Label layoutX="36.0" layoutY="131.0" text="E-mail" />
+      <TextField fx:id="emailTFD" layoutX="145.0" layoutY="127.0" prefHeight="25.0" prefWidth="287.0" />
+      <Label layoutX="36.0" layoutY="165.0" text="Salaire" />
+      <TextField fx:id="salaireTFD" layoutX="145.0" layoutY="161.0" prefHeight="25.0" prefWidth="287.0" />
+      <Label layoutX="36.0" layoutY="204.0" text="Date Naissance" />
+      <Label layoutX="36.0" layoutY="240.0" text="Matière" />
+      <ComboBox fx:id="matiereCBX" layoutX="145.0" layoutY="236.0" prefHeight="25.0" prefWidth="287.0" />
+      <Button fx:id="saveBTN" layoutX="103.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleSave" text="ENREGISTRER" />
+      <Button fx:id="initBTN" layoutX="234.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleInit" text="INITIALISER" />
+      <TableView fx:id="formateurTBV" layoutX="36.0" layoutY="330.0" prefHeight="200.0" prefWidth="760.0">
+        <columns>
+          <TableColumn fx:id="nomTBCL" prefWidth="130.0" text="NOM" />
+          <TableColumn fx:id="prenomTBCL" prefWidth="193.0" text="PRENOM" />
+            <TableColumn fx:id="emailTBCL" prefWidth="78.0" text="EMAIL" />
+            <TableColumn fx:id="salaireTBCL" prefWidth="91.0" text="SALAIRE" />
+            <TableColumn fx:id="dateNaissanceTBCL" prefWidth="127.0" text="DATE DE NAISA NCE" />
+            <TableColumn fx:id="matiereTBCL" prefWidth="121.0" text="MATIERE" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dateNaissancePK" layoutX="145.0" layoutY="200.0" prefHeight="25.0" prefWidth="287.0" />
+   </children>
+</AnchorPane>
